@@ -52,6 +52,10 @@ Run tests using `pytest`:
 pytest
 ```
 
+## Code Coverage with pytest-coverage
+
+The repository is configured to automatically generate test coverage reports when running `pytest`, using `pytest-coverage`.
+
 ## Code Quality and Formatting
 
 ### Black (Code Formatter)
