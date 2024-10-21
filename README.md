@@ -30,6 +30,11 @@ This repository provides a boilerplate for building an asynchronous FastAPI appl
    pip install -r requirements.txt
    ```
 
+4. Install dependencies for testing & development (optional):
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+
 ## Usage
 
 1. Run the FastAPI development server:
