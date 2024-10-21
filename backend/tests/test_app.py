@@ -1,8 +1,10 @@
-import pytest
 import json
 from pathlib import Path
 
+import pytest
+
 openapi_json_path = Path(__file__).parent / "../docs/openapi.json"
+
 
 class TestGenerateDocumentation:
 

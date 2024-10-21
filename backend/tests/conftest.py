@@ -16,9 +16,12 @@ async def client() -> AsyncGenerator[fastapi.testclient.TestClient, None]:
     test_client = fastapi.testclient.TestClient(app.app)
     yield test_client
 
+
 @pytest.fixture(autouse=True)
 def mock_aiohttp_session(monkeypatch):
     tests.mock.aiohttp.data_to_use = []
-    tests.mock.aiohttp.next_status = [200, ]
+    tests.mock.aiohttp.next_status = [
+        200,
+    ]
     tests.mock.aiohttp.requests_done = []
     monkeypatch.setattr(aiohttp, 'ClientSession', lambda *args, **kwargs: tests.mock.aiohttp.MockSession())

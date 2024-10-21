@@ -11,6 +11,84 @@ This repository provides a boilerplate for building an asynchronous FastAPI appl
 - **Import Sorting with isort**: `isort` is configured to automatically sort imports based on standard conventions.
 - **Code Linting with pylint**: `pylint` is set up for static analysis, ensuring that the codebase adheres to best practices and style guidelines.
 
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://https://github.com/lasagnu/fastapi-boilerplate.git
+   cd fastapi-boilerplate/backend
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Run the FastAPI development server:
+   ```bash
+   uvicorn app:app --reload
+   ```
+
+2. Access the auto-generated OpenAPI docs at `http://127.0.0.1:8000/docs` or `http://127.0.0.1:8000/redoc`.
+
+## Testing
+
+Run tests using `pytest`:
+
+```bash
+pytest
+```
+
+## Code Quality and Formatting
+
+### Black (Code Formatter)
+
+To automatically format your code using `black`, run:
+
+```bash
+black .
+```
+
+### isort (Import Sorting)
+
+Ensure that your imports are sorted according to the configured rules:
+
+```bash
+isort .
+```
+
+### Pylint (Static Code Analysis)
+
+Run `pylint` to check the code quality and adherence to Python style conventions:
+
+```bash
+pylint . --rcfile .pylintrc
+```
+
+## Configuration
+
+### Pytest
+
+The [setup.cfg](backend/setup.cfg) file includes configuration for `pytest` to ensure it looks for tests in the `backend/tests` directory.
+
+### Pylint
+
+The [.pylintrc](backend/.pylintrc) file contains settings for `pylint` to enforce coding standards.
+
+
+### Black & isort
+
+The [pyproject.toml](backend/pyproject.toml) file contains settings for `black` and `isort`
+
+
 ## Contributing
 
 Feel free to open an issue or submit a pull request if you'd like to contribute to this boilerplate or have suggestions for improvements.
