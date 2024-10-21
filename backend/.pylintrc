@@ -1,0 +1,23 @@
+[MAIN]
+fail-under=8
+ignore-paths=venv .venv
+load-plugins=pylint.extensions.mccabe, pylint_pydantic
+recursive=yes
+
+[FORMAT]
+max-line-length=127
+
+[REPORTS]
+evaluation=max(0, 10 - (10 if fatal else 0) - (5 if error else 0) - (float(( 3 * min(10*warning, statement) + 2 * min(10*refactor, statement) + 2 * min(10 * convention, statement)) / statement)))
+reports=yes
+score=yes
+
+[MESSAGES CONTROL]
+disable=unspecified-encoding,
+        missing-function-docstring,
+        missing-class-docstring,
+        missing-module-docstring,
+        redefined-outer-name,
+        too-few-public-methods,
+        unused-argument,
+        unnecessary-pass,

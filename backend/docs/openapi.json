@@ -1,0 +1,26 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "FastAPI Boilerplate",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Show Main Page",
+                "description": "Entry page",
+                "operationId": "show_main_page__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
